@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="22"
+    density="xxhdpi"
+    format="7"
+    timestamp="13713768099171"
+    token="6735988377650489410" >
+
+    <task
+        name="javac"
+        duration="249" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="65" />
+    <task
+        name="verifier"
+        duration="12" />
+
+    <artifact
+        location="C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+        type="DEX" />
+
+    <build timestamp="9090895158686" >
+        <artifact
+            location="C:\Users\Administrator\Desktop\QR_CodeScan\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build timestamp="12759925437972" >
+        <artifact
+            location="C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="13713768099171" >
+        <artifact
+            location="C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+            type="DEX" />
+    </build>
+
+</instant-run>

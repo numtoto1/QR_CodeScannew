@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.example.qr_codescan"
+        minSdkVersion 14
+        targetSdkVersion 19
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+dependencies {
+    compile 'com.android.support:appcompat-v7:19.0.0'
+    compile 'com.android.support:support-v4:19.0.0'
+    compile files('libs/zxing.jar')
+    compile files('libs/xUtils-2.6.14.jar')
+    compile 'com.liulishuo.filedownloader:library:0.3.2'
+    compile files('libs/volly-1.0.11.jar')
+    compile files('libs/gson-2.3.1.jar')
+    compile files('libs/ezmorph-1.0.2.jar')
+    compile files('libs/json-lib-1.1-jdk13.jar')
+    compile files('libs/xom-1.0d10.jar')
+    compile files('libs/commons-beanutils.jar')
+    compile files('libs/commons-collections-3.0.jar')
+    compile files('libs/commons-httpclient-3.1.jar')
+    compile files('libs/commons-lang-2.1.jar')
+    compile files('libs/commons-logging.jar')
+    compile files('libs/core-3.1.0.jar')
+    compile files('libs/ezmorph-1.0.2.jar')
+}
