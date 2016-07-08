@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:2:1-51:12
+ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:2:1-52:12
 	xmlns:android
 		ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:2:11-69
 	package
@@ -35,6 +35,7 @@ uses-sdk
 ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:10:5-12:41
 MERGED from [com.android.support:appcompat-v7:19.0.0] C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.0.0\AndroidManifest.xml:18:5-42
 MERGED from [com.liulishuo.filedownloader:library:0.3.2] C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\exploded-aar\com.liulishuo.filedownloader\library\0.3.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.jiechic.library:xUtils:2.6.14] C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\exploded-aar\com.jiechic.library\xUtils\2.6.14\AndroidManifest.xml:7:5-9:41
 	android:targetSdkVersion
 		ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:12:9-38
 		INJECTED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml
@@ -56,9 +57,10 @@ ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManife
 	android:smallScreens
 		ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:14:9-36
 application
-ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:20:5-43:19
+ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:20:5-44:19
 MERGED from [com.android.support:appcompat-v7:19.0.0] C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.0.0\AndroidManifest.xml:19:5-20
 MERGED from [com.liulishuo.filedownloader:library:0.3.2] C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\exploded-aar\com.liulishuo.filedownloader\library\0.3.2\AndroidManifest.xml:11:5-16:19
+MERGED from [com.jiechic.library:xUtils:2.6.14] C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\exploded-aar\com.jiechic.library\xUtils\2.6.14\AndroidManifest.xml:11:5-20
 	android:label
 		ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:23:9-41
 	android:allowBackup
@@ -101,22 +103,26 @@ activity#com.example.qr_codescan.Scan_Writer
 ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:42:9-48
 	android:name
 		ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:42:19-46
+activity#com.example.qr_codescan.RegisterActivity
+ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:43:9-53
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:43:19-51
 uses-permission#android.permission.VIBRATE
-ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:45:5-66
+ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:46:5-66
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:45:22-63
+		ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:46:22-63
 uses-permission#android.permission.CAMERA
-ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:46:5-65
+ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:47:5-65
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:46:22-62
+		ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:47:22-62
 uses-feature#android.hardware.camera
-ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:48:5-60
+ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:49:5-60
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:48:19-57
+		ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:49:19-57
 uses-feature#android.hardware.camera.autofocus
-ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:49:5-70
+ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:50:5-70
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:49:19-67
+		ADDED from C:\Users\Administrator\Desktop\QR_CodeScan\app\src\main\AndroidManifest.xml:50:19-67
 service#com.liulishuo.filedownloader.services.FileDownloadService$SharedMainProcessService
 ADDED from [com.liulishuo.filedownloader:library:0.3.2] C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\exploded-aar\com.liulishuo.filedownloader\library\0.3.2\AndroidManifest.xml:12:9-118
 	android:name

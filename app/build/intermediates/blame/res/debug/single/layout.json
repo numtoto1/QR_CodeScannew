@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\src\\main\\res\\layout\\activity_title.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\res\\merged\\debug\\layout\\write_pad.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\src\\main\\res\\layout\\write_pad.xml"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.0.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\res\\merged\\debug\\layout\\write_pad.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\src\\main\\res\\layout\\write_pad.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
@@ -76,6 +76,10 @@
         "source": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.0.0\\res\\layout\\abc_action_bar_tabbar.xml"
     },
     {
+        "merged": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.0.0\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.0.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
@@ -84,8 +88,8 @@
         "source": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.0.0\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.0.0\\res\\layout\\abc_action_menu_item_layout.xml"
+        "merged": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\res\\merged\\debug\\layout\\register_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\src\\main\\res\\layout\\register_main.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_capture.xml",

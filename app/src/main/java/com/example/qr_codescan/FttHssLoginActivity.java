@@ -26,9 +26,9 @@ import com.lidroid.xutils.exception.HttpException;
 import net.sf.json.JSONObject;
 
 import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.httpclient.methods.PostMethod;
-import org.apache.http.HttpStatus;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -51,6 +51,9 @@ public class FttHssLoginActivity extends Activity {
 	static String msg1, msg2;
 	SharedPreferences preferences;
 	SharedPreferences.Editor editor;
+	private Button btn_Register;
+	private String status;
+	private int statusCode;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +68,17 @@ public class FttHssLoginActivity extends Activity {
 		username = (EditText) findViewById(R.id.edtuser);
 		password = (EditText) findViewById(R.id.edtpsw);
 		Button btn_login = (Button) findViewById(R.id.login);
-
+        btn_Register= (Button) findViewById(R.id.register);
+		btn_Register.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				        Intent intent = new Intent();
+						intent.setClass(FttHssLoginActivity.this,
+								RegisterActivity.class);
+						intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+						startActivity(intent);
+			}
+		});
 		Button btnzhuce = (Button) findViewById(R.id.btnzhuce);
 
 		btnzhuce.setOnClickListener(new OnClickListener() {
@@ -77,11 +90,14 @@ public class FttHssLoginActivity extends Activity {
 
 				new Thread() {
 					public void run() {
+
 						try {
-							if (PostRequestzhuce() == HttpStatus.SC_OK) {
+							try {
+								if (PostRequestzhuce() == HttpStatus.SC_OK) {
+                                }
+							} catch (HttpException e) {
+								e.printStackTrace();
 							}
-						} catch (HttpException e) {
-							Log.i("Fatal",e.getMessage());
 						} catch (IOException e) {
 							Log.i("Fatal",e.getMessage());
 
@@ -152,7 +168,8 @@ public class FttHssLoginActivity extends Activity {
 				psw = password.getText().toString();
 				Log.i("flag","username---"+user);
 				Log.i("flag","password---"+psw);
-				new Thread() {
+				new Thread(new Runnable() {
+					@Override
 					public void run() {
 						try {
 							if (PostRequest() == HttpStatus.SC_OK) {
@@ -166,17 +183,20 @@ public class FttHssLoginActivity extends Activity {
 								intent.putExtra("info",info_bean);
 								startActivity(intent);
 							} else {
+								Toast.makeText(FttHssLoginActivity.this, "-------", Toast.LENGTH_SHORT).show();
 							}
 
-						} catch (HttpException e) {
+						} catch (org.apache.commons.httpclient.HttpException e) {
 							System.err.println("Fatal protocol violation: "
 									+ e.getMessage());
 						} catch (IOException e) {
 							System.err.println("Fatal transport error: "
 									+ e.getMessage());
+						} catch (HttpException e) {
+							e.printStackTrace();
 						}
 					}
-				}.start();
+				}).start();
 			}
 		});
 	}
@@ -196,8 +216,6 @@ public class FttHssLoginActivity extends Activity {
 			}
 			 Message msg = AppData.getInstance().getmHandler()
 					.obtainMessage(AppData.MESSAGE_TOAST);
-
-
 					Bundle bundle = new Bundle();
 					bundle.putString(AppData.TOAST, infomsg);
 					msg.setData(bundle);
@@ -211,9 +229,9 @@ public class FttHssLoginActivity extends Activity {
 		HttpClient client = new HttpClient();
 		StringBuilder sb = new StringBuilder();
 		InputStream ins = null;
-		int statusCode = HttpStatus.SC_METHOD_FAILURE;
+		statusCode = HttpStatus.SC_METHOD_FAILURE;
 		JSONObject jsonObj = null;
-		appUser1 = preferences.getString("appUser",null);
+		 appUser1 = preferences.getString("appUser",null);
 		appPassword = preferences.getString("appPassword",null);
 		Log.i("flag","preferences----->"+appUser1);
 		Log.i("flag","preferences----->"+appPassword);
@@ -257,16 +275,35 @@ public class FttHssLoginActivity extends Activity {
 					jsonObj = JSONObject.fromString(result);
 					if (jsonObj != null) {
 						//status、message、operatorId
-						String status = jsonObj.getString("status");
-						Log.i("flag","status--->"+status);
+						status = jsonObj.getString("status");
+						Log.i("flag","status--->"+ status);
 						msg1 = jsonObj.optString("message");
 						operatorId = jsonObj.optString("userId");
 						Log.i("flag","msg1--->"+msg1);
 						if (status.equals("success")) {
-							showMessage(AppData.PROMPT_QUERY, msg1, true);
+							//showMessage(AppData.PROMPT_QUERY, msg1, true);
+							Looper.prepare();
+							statusCode = HttpStatus.SC_OK;
+							Log.i("flag","statusCode#######"+ statusCode);
+							Toast.makeText(FttHssLoginActivity.this,msg1, Toast.LENGTH_SHORT).show();
+							//showMessage(AppData.PROMPT_QUERY, msg1, true)
+							Intent intent = new Intent();
+							intent.setClass(FttHssLoginActivity.this,
+									Scan_Writer.class);
+							intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+							Info_bean info_bean = new Info_bean(user,appUser,appPassword,deviceId,signature
+									,operatorId);
+							Log.i("1111",info_bean.toString());
+							intent.putExtra("info",info_bean);
+							startActivity(intent);
+							Looper.loop();
 						} else {
+							//showMessage(AppData.PROMPT_WARN, msg1, false);
+							Looper.prepare();
 							statusCode = HttpStatus.SC_METHOD_FAILURE;
-							showMessage(AppData.PROMPT_WARN, msg1, false);
+							Toast.makeText(FttHssLoginActivity.this,msg1, Toast.LENGTH_SHORT).show();
+							//showMessage(AppData.PROMPT_QUERY, msg1, true);
+							Looper.loop();
 						}
 					}
 				} catch (Exception e) {
@@ -288,6 +325,7 @@ public class FttHssLoginActivity extends Activity {
 				ins.close();
 			}
 		}
+
 		return statusCode;
 	}
 	//注册时请求。
@@ -298,7 +336,7 @@ public class FttHssLoginActivity extends Activity {
 		int statusCode = HttpStatus.SC_METHOD_FAILURE;
 		JSONObject jsonObj = null;
 		//注册时网址。
-		PostMethod method = new PostMethod(Url.register_url);
+		PostMethod method = new PostMethod(Url.register);
 		Log.i("flag","到这里了");
 		//设备注册时deviceId、signature、username、password
 		NameValuePair[] param = {

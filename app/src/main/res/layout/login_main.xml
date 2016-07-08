@@ -58,8 +58,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="center|center_vertical"
-        android:layout_weight="0.76"
-        android:orientation="horizontal" >
+        android:layout_weight="1"
+        android:orientation="vertical" >
 
         <Button
             android:id="@+id/login"
@@ -74,6 +74,18 @@
             android:textColor="@android:color/white"/>
 
 
+        <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape"
+            style="?android:attr/borderlessButtonStyle"
+            android:text="注册"
+            android:textSize="20sp"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:textColor="@android:color/white"/>
 
     </LinearLayout>
 

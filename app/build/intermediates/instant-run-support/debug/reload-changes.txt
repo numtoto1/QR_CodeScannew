@@ -1,11 +1,2 @@
-CHANGED,C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\qr_codescan\Scan_Writer$3$override.class
-CHANGED,C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\qr_codescan\Scan_Writer$1$override.class
-CHANGED,C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\qr_codescan\Scan_Writer$override.class
-CHANGED,C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\qr_codescan\Scan_Writer$2$override.class
-CHANGED,C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\qr_codescan\MainActivity$override.class
 CHANGED,C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
-CHANGED,C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\qr_codescan\MainActivity$3$override.class
-CHANGED,C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\qr_codescan\Scan_Writer$4$override.class
-CHANGED,C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\qr_codescan\Scan_Writer$3$1$override.class
-CHANGED,C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\qr_codescan\MainActivity$1$override.class
-CHANGED,C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\qr_codescan\MainActivity$2$override.class
+CHANGED,C:\Users\Administrator\Desktop\QR_CodeScan\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\qr_codescan\FttHssLoginActivity$override.class

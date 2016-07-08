@@ -49,6 +49,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.qr_codescan.Scan_Writer" />
+        <activity android:name="com.example.qr_codescan.RegisterActivity" />
 
         <service android:name="com.liulishuo.filedownloader.services.FileDownloadService$SharedMainProcessService" />
         <service

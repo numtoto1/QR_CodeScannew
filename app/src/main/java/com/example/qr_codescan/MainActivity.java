@@ -6,6 +6,8 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -27,9 +29,13 @@ import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.lidroid.xutils.http.client.HttpRequest;
+
+
+import org.apache.http.HttpRequest;
+
 import java.io.File;
 import java.lang.reflect.Type;
+import java.util.HashMap;
 
 public class MainActivity extends Activity {
 	private final static int SCANNIN_GREQUEST_CODE = 1;
@@ -39,6 +45,8 @@ public class MainActivity extends Activity {
 	private String name = null;
 	private Info_bean info;
 	private ProgressDialog dialog;
+	private HashMap<Integer, Integer> soundPoolMap;
+	private SoundPool soundPool;
 	private Handler handler=new Handler() {
 		@Override
 		public void handleMessage(Message msg) {
@@ -50,7 +58,13 @@ public class MainActivity extends Activity {
 			}.getType();
 			JsonBean jsonBean = gson.fromJson(result, type);
 			Log.e("flag","json--->"+jsonBean.toString());
-			Toast.makeText(MainActivity.this,jsonBean.getMessage(),Toast.LENGTH_SHORT).show();
+			if (jsonBean.getStatus().equals("success")){
+				showMessage( AppData.PROMPT_SUCCESS,true);
+				Toast.makeText(MainActivity.this,jsonBean.getMessage(),Toast.LENGTH_SHORT).show();
+			}else {
+				showMessage( AppData.PROMPT_ERROR,true);
+				Toast.makeText(MainActivity.this,jsonBean.getMessage(),Toast.LENGTH_SHORT).show();
+			}
 
 		}
 	};
@@ -101,7 +115,7 @@ public class MainActivity extends Activity {
 		params.addBodyParameter("userId", operatorId);
 		params.addBodyParameter("numble", numble);
 		HttpUtils http = new HttpUtils();
-		http.send(HttpRequest.HttpMethod.POST,
+		http.send(com.lidroid.xutils.http.client.HttpRequest.HttpMethod.POST,
 				"http://192.168.10.154/api/sign.html",
 				params,
 				new RequestCallBack<String>() {
@@ -145,6 +159,11 @@ public class MainActivity extends Activity {
 		dialog.setCanceledOnTouchOutside(false);// 设置在点击Dialog外是否取消Dialog进度条
 		dialog.setIcon(R.drawable.ic_launcher);//
 		dialog.setMessage("稍等...");
+		soundPool = new SoundPool(3, AudioManager.STREAM_MUSIC, 100);
+		soundPoolMap = new HashMap<Integer, Integer>();
+		soundPoolMap.put(1,soundPool.load(MainActivity.this, R.raw.success, 1));
+		soundPoolMap.put(2,soundPool.load(MainActivity.this, R.raw.query, 1));
+		soundPoolMap.put(3,soundPool.load(MainActivity.this, R.raw.error, 1));
 	}
 
 	@Override
@@ -204,6 +223,20 @@ public class MainActivity extends Activity {
 		//delFolder(sign_dir);
 		super.onDestroy();
 	}
-
+	public void showMessage(int msgType,boolean isSound) {
+		try {
+			if (isSound) {
+				if (msgType == AppData.PROMPT_SUCCESS) {
+					soundPool.play(soundPoolMap.get(1), 1, 1, 0, 0, 1);
+				} else if (msgType == AppData.PROMPT_QUERY) {
+					soundPool.play(soundPoolMap.get(2), 1, 1, 0, 0, 1);
+				}else {
+					soundPool.play(soundPoolMap.get(3), 1, 1, 0, 0, 1);
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 }

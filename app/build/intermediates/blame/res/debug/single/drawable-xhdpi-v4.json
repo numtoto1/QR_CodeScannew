@@ -256,12 +256,12 @@
         "source": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.0.0\\res\\drawable-xhdpi\\abc_ic_commit_search_api_holo_light.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_divider_holo_dark.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.0.0\\res\\drawable-xhdpi\\abc_list_divider_holo_dark.9.png"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_divider_holo_light.9.png",
         "source": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.0.0\\res\\drawable-xhdpi\\abc_list_divider_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_divider_holo_dark.9.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.0.0\\res\\drawable-xhdpi\\abc_list_divider_holo_dark.9.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\QR_CodeScan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_menu_hardkey_panel_holo_light.9.png",
