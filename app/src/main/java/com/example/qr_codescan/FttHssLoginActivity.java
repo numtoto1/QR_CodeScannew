@@ -230,6 +230,7 @@ public class FttHssLoginActivity extends Activity {
 		StringBuilder sb = new StringBuilder();
 		InputStream ins = null;
 		statusCode = HttpStatus.SC_METHOD_FAILURE;
+
 		JSONObject jsonObj = null;
 		 appUser1 = preferences.getString("appUser",null);
 		appPassword = preferences.getString("appPassword",null);
